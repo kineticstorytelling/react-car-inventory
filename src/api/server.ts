@@ -1,14 +1,15 @@
-let token = 'a72358eee559938b6c5d601fa23a17ad4f20523ffa0f2241'
+let token = 'b94ba27e0dfa8790bac3c78922a4bf401584ecb8a56d65d5'
 
 export const server_calls = {
     get: async () => {
-       const response = await fetch(`https://lime-different-pan.glitch.me/profile`,
+       const response = await fetch(`https://fantastic-diamond-risk.glitch.me/api/cars`,
             {
                 method: 'GET',
-                mode: "cors",
+                // mode: "cors",
                 headers: {
                     'Content-Type': 'application/json',
                     'x-access-token': `Bearer ${token}`,
+                    // 'Access-Control-Allow-Origin': 'https://fantastic-diamond-risk.glitch.me',
                 },
             });
     
@@ -20,12 +21,14 @@ export const server_calls = {
         },
     
     create: async (data: any = {}) => {
-        const response = await fetch(`https://lime-different-pan.glitch.me/profile`,
+        const response = await fetch(`https://fantastic-diamond-risk.glitch.me/api/cars`,
             {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-access-token': 'Bearer ${token}',
+                    'x-access-token': `Bearer ${token}`,
+                    'Access-Control-Allow-Origin': 'https://fantastic-diamond-risk.glitch.me',
+                    // 'Access-Control-Allow-Methods': GET, POST, DELETE,
                 },
                 body: JSON.stringify(data)
             })
@@ -38,7 +41,7 @@ export const server_calls = {
         },
     
     update: async (id:string, data: any = {}) => {
-        const response = await fetch(`https://lime-different-pan.glitch.me/${id}`,
+        const response = await fetch(`https://fantastic-diamond-risk.glitch.me/api/cars/${id}`,
             {
                 method: "POST",
                 headers: {
@@ -56,7 +59,7 @@ export const server_calls = {
         },
     
     delete: async (id:string) => {
-            const response = await fetch(`https://lime-different-pan.glitch.me/${id}`,
+            const response = await fetch(`https://fantastic-diamond-risk.glitch.me/api/cars/${id}`,
             {
                 method: "DELETE",
                 headers: {

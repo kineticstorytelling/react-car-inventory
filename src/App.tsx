@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Routes, Route, Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import routes from './config/routes'
 import { Provider } from 'react-redux'
 import { store } from './redux/store'
 // import Home from './pages/Home'
-
+// 
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Provider store={store}>
         <Routes>
@@ -24,7 +24,7 @@ function App() {
           )) }
         </Routes>
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

@@ -4,14 +4,21 @@ import Modal from './Modal'
 import { server_calls } from '../api/server';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
+import './dataTable.css'
 
 
-const columns: GridColDef[]=[
+const columns: GridColDef[] = [
     {field: 'id', headerName: "ID", width: 90, hide: true},
-    {field: 'name', headerName: 'Contact Name', flex: 1},
-    {field: 'email', headerName: 'Email', flex: 1},
-    {field: 'phone_number', headerName: 'Phone Number', flex: 1},
-    {field: 'address', headerName: 'Address', flex: 2},
+    {field: 'make', headerName: 'Make', flex: 1},
+    {field: 'model', headerName: 'Model', flex: 1},
+    {field: 'color', headerName: 'Color', flex: 1},
+    {field: 'year', headerName: 'Year', flex: 2}
+
+    // {field: 'id', headerName: "ID", width: 90, hide: true},
+    // {field: 'name', headerName: 'Contact Name', flex: 1},
+    // {field: 'email', headerName: 'Email', flex: 1},
+    // {field: 'phone_number', headerName: 'Phone Number', flex: 1},
+    // {field: 'address', headerName: 'Address', flex: 2},
 ]
 
 function DataTable() {
@@ -58,14 +65,13 @@ function DataTable() {
             style = {{height: 400, width: '100%'}}
             >
                 <h2 className='p-3 bg-blue-200 my-2 rounded'>My Contacts</h2>
-                <DataGrid rows={contactData} columns={columns} rowsPerPageOptions={[5]}
+                <DataGrid className='text-white-100' rows={contactData} columns={columns} rowsPerPageOptions={[5]}
                 checkboxSelection={true} 
-                onSelectionModelChange = {(item:any) =>{
+                onSelectionModelChange = {(item:any) => {
                     setSelectionModel(item)
                 }}
                 />
         </div>
-        {/* <button onClick={getData}>get data</button> */}
     </>
   )
 }

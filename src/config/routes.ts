@@ -7,7 +7,7 @@ interface RouteType {
     component: () => JSX.Element,
     name: string
 }
-
+// protected boolean - set dashboard false
 const routes: RouteType[] = [
     {
         path: "",

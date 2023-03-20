@@ -12,7 +12,7 @@ function Navbar() {
     const clicked = () =>{
         setIsVisible(false)
     }
-
+// set it to where you have to be logged in to see the dashboard button LIKE sql alchemy
     return (
     <nav className= "flex items-center justify-between flex-wrap bg-black">
         <div className="flex items-center flex-shrink-0 text-white mr-6 p-4">
