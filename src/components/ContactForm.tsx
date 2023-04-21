@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import { server_calls } from "../api/server";
 import { useDispatch, useStore } from "react-redux";
 import { chooseMake, chooseModel, chooseColor, chooseYear} from '../redux/slices/RootSlice';
-// import { chooseName, chooseEmail, chooseAddress, choosePhone} from '../redux/slices/RootSlice';
 
 // interfaces
 
@@ -38,11 +37,6 @@ const ContactForm = (props:ContactFormProps) => {
         dispatch(chooseColor(data.color));
         dispatch(chooseYear(data.year));
 
-        // dispatch(chooseName(data.name));
-        // dispatch(chooseEmail(data.email));
-        // dispatch(choosePhone(data.phone_number));
-        // dispatch(chooseAddress(data.address));
-    
         server_calls.create(store.getState())
         // this will ping the store variable and get the info and create a new user with the info using the create function
         setTimeout(() => {
@@ -77,7 +71,7 @@ const ContactForm = (props:ContactFormProps) => {
                 >
                     Submit
                 </Button>
-            </form>
+          </form>
         </div>
   )
 }
