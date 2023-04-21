@@ -13,7 +13,6 @@ function About() {
           className='bg-cover w-1/2 h-screen'
       >
       </div>
-      {/* <img className="w-2/5 mx-15" src="/src/assets/images/cars1.jpg" alt="" /> */}
     </div>
   )
 }
