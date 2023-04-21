@@ -9,7 +9,7 @@ const Contact = () => {
       <p className="text-white text-3xl p-3">Let's Connect</p>
       <button className='bg-white m-3 px-5 py-4 text-xl rounded hover:bg-gray-700 hover:text-white'>Contact</button>
       </div>
-      <img className="w-2/5 mx-15" src="/assets/images/cars2.jpg" alt="Car driving in sunset" />
+      <img className="w-2/5 mx-15" src="/src/assets/images/cars2.jpg" alt="Car driving in sunset" />
     </div>
   )
 }
